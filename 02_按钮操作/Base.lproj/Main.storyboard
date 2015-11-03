@@ -32,7 +32,7 @@
                                 </state>
                                 <state key="highlighted" image="left_highlighted"/>
                                 <connections>
-                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lwh-JM-FEQ"/>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c6u-if-WAY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-QD-IPi">
@@ -42,7 +42,7 @@
                                 </state>
                                 <state key="highlighted" image="right_highlighted"/>
                                 <connections>
-                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="epo-hW-muI"/>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Qn-hB-cxy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c08-Ue-3Th">
@@ -52,7 +52,7 @@
                                 </state>
                                 <state key="highlighted" image="bottom_highlighted"/>
                                 <connections>
-                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g8M-vg-44Y"/>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YNj-nW-5Qg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-Hg-CPH">
@@ -62,7 +62,47 @@
                                 </state>
                                 <state key="highlighted" image="top_highlighted"/>
                                 <connections>
-                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wk2-WM-CMu"/>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rqR-AU-t8k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-vr-92e">
+                                <rect key="frame" x="180" y="457" width="50" height="50"/>
+                                <state key="normal" title="Button" image="plus_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="plus_highlighted"/>
+                                <connections>
+                                    <action selector="Zoom:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cRX-Ng-AP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw7-LV-hPB">
+                                <rect key="frame" x="266" y="457" width="50" height="50"/>
+                                <state key="normal" title="Button" image="minus_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="minus_highlighted"/>
+                                <connections>
+                                    <action selector="Zoom:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jnz-wf-yr9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSp-qF-6zt">
+                                <rect key="frame" x="180" y="530" width="50" height="50"/>
+                                <state key="normal" title="Button" image="left_rotate_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="left_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="Rotate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zho-LU-xwq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBQ-fQ-HXh">
+                                <rect key="frame" x="266" y="530" width="50" height="50"/>
+                                <state key="normal" title="Button" image="right_rotate_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="right_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="Rotate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oLp-XL-OTK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,8 +125,16 @@
         <image name="btn_02" width="100" height="100"/>
         <image name="left_highlighted" width="96" height="96"/>
         <image name="left_normal" width="96" height="96"/>
+        <image name="left_rotate_highlighted" width="96" height="96"/>
+        <image name="left_rotate_normal" width="96" height="96"/>
+        <image name="minus_highlighted" width="96" height="96"/>
+        <image name="minus_normal" width="96" height="96"/>
+        <image name="plus_highlighted" width="96" height="96"/>
+        <image name="plus_normal" width="96" height="96"/>
         <image name="right_highlighted" width="96" height="96"/>
         <image name="right_normal" width="96" height="96"/>
+        <image name="right_rotate_highlighted" width="96" height="96"/>
+        <image name="right_rotate_normal" width="96" height="96"/>
         <image name="top_highlighted" width="96" height="96"/>
         <image name="top_normal" width="96" height="96"/>
     </resources>
