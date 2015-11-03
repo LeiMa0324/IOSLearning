@@ -9,10 +9,36 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *AddNum1;
+@property (weak, nonatomic) IBOutlet UITextField *AddNum2;
+@property (weak, nonatomic) IBOutlet UILabel *SumNum;
 
 @end
 
 @implementation ViewController
+
+-(IBAction)compute{
+
+    //获取两个文本框中的string
+    NSString *num1=self.AddNum1.text;
+    NSString *num2=self.AddNum2.text;
+    
+    
+    //intvalue转化为int型，两数字相加
+    int sum=num1.intValue+num2.intValue;
+    
+    //相加后的int转化为string，赋值给label.text
+    self.SumNum.text=[NSString stringWithFormat:@"%d",sum];
+    
+//    //关闭两个文本框的响应
+//    [self.AddNum1 resignFirstResponder];
+//    [self.AddNum2 resignFirstResponder];
+//
+    //用视图去关闭所有键盘
+    [self.view endEditing:YES];
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
