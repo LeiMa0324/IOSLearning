@@ -25,6 +25,36 @@
                                 </state>
                                 <state key="highlighted" title="摸我干啥" backgroundImage="btn_02"/>
                             </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12C-jj-gYY">
+                                <rect key="frame" x="41" y="371" width="50" height="50"/>
+                                <state key="normal" title="Button" image="left_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="left_highlighted"/>
+                                <connections>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lwh-JM-FEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-QD-IPi">
+                                <rect key="frame" x="129" y="371" width="50" height="50"/>
+                                <state key="normal" title="Button" image="right_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="right_highlighted"/>
+                                <connections>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="epo-hW-muI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c08-Ue-3Th">
+                                <rect key="frame" x="83" y="418" width="50" height="50"/>
+                                <state key="normal" title="Button" image="bottom_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="bottom_highlighted"/>
+                                <connections>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g8M-vg-44Y"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-Hg-CPH">
                                 <rect key="frame" x="83" y="325" width="50" height="50"/>
                                 <state key="normal" title="Button" image="top_normal">
@@ -32,37 +62,7 @@
                                 </state>
                                 <state key="highlighted" image="top_highlighted"/>
                                 <connections>
-                                    <action selector="top" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JCr-Lq-PWK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-QD-IPi">
-                                <rect key="frame" x="129" y="371" width="50" height="50"/>
-                                <state key="normal" title="Button" image="right_normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" image="right_highlighted"/>
-                                <connections>
-                                    <action selector="right" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OQP-hG-Xes"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12C-jj-gYY">
-                                <rect key="frame" x="41" y="371" width="50" height="50"/>
-                                <state key="normal" title="Button" image="left_normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" image="left_highlighted"/>
-                                <connections>
-                                    <action selector="left" destination="vXZ-lx-hvc" eventType="touchUpInside" id="it2-nB-WnF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c08-Ue-3Th">
-                                <rect key="frame" x="83" y="418" width="50" height="50"/>
-                                <state key="normal" title="Button" image="bottom_normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" image="bottom_highlighted"/>
-                                <connections>
-                                    <action selector="bottom" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rh4-tE-12w"/>
+                                    <action selector="Move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wk2-WM-CMu"/>
                                 </connections>
                             </button>
                         </subviews>

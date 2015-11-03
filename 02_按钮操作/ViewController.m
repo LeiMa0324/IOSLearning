@@ -12,7 +12,13 @@
 
 @property (nonatomic,weak)  IBOutlet UIButton *iconButton;
 
-
+typedef enum
+{
+    top=0,
+    right,
+    left,
+    bottom
+}Kdirect;
 
 @end
 
@@ -27,6 +33,10 @@
 //    [super didReceiveMemoryWarning];
 //    // Dispose of any resources that can be recreated.
 //}
+
+
+
+/*====================================================
 - (IBAction)top{
     
    // self.iconButton.frame.origin.y -=20;
@@ -54,13 +64,41 @@
     self.iconButton.frame=frame;
 }
 
-- (IBAction)left{
+- (IBAction)left
+ {
     
     CGRect frame=self.iconButton.frame;
     frame.origin.x -=20;
     self.iconButton.frame=frame;
 }
+*/
 
+//=================代码优化
+
+
+-(IBAction)Move:(UIButton *)button
+{
+    CGRect frame=self.iconButton.frame;
+    
+    switch (button.tag) {
+        case top:
+            frame.origin.y -=20;
+            break;
+        case right:
+            frame.origin.x +=20;
+            break;
+        case left:
+            frame.origin.x -=20;
+            break;
+        case bottom:
+            frame.origin.y +=20;
+            break;
+
+    }
+    
+    self.iconButton.frame=frame;
+
+}
 
 
 
