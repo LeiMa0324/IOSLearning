@@ -30,9 +30,14 @@ typedef enum
     [super viewDidLoad];    //重写该代码必须调用父类的该方法
     
     
-    //---------使用代码创建按钮1
+    //========================使用代码创建按钮1
     //使用alloc init初始化的按钮，就是custom类型的，一旦被指定，不能修改其类型
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 150, 100, 100)];
+    
+    //如果创建其他类型的按钮
+    UIButton *btn1=[UIButton buttonWithType:UIButtonTypeContactAdd];
+    [self.view addSubview:btn1];
+    btn1.center=CGPointMake(10, 20);    //改变center的位置
     
     //将btn赋给属性Iconbutton
     self.iconButton=btn;
@@ -41,8 +46,8 @@ typedef enum
     btn.backgroundColor=[UIColor redColor];
     
     //设置背景图片
-    [btn setBackgroundImage:@"btn_01" forState:UIControlStateNormal];
-    [btn setBackgroundImage:@"btn_02" forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:[UIImage imageNamed:@"btn_01"] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"btn_02"] forState:UIControlStateHighlighted];
     
     //设置按钮文字
     [btn setTitle:@"点我啊" forState:UIControlStateNormal];
@@ -51,6 +56,9 @@ typedef enum
     //设置文字颜色
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
+    
+    //将button加到界面上
+    [self.view addSubview:btn];
 
 }
 
