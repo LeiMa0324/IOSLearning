@@ -24,6 +24,44 @@ typedef enum
 
 @implementation ViewController
 
+//加载完成后被调用，重写该代码
+-(void)viewDidLoad
+{
+    [super viewDidLoad];    //重写该代码必须调用父类的该方法
+    
+    
+    //---------使用代码创建按钮1
+    //使用alloc init初始化的按钮，就是custom类型的，一旦被指定，不能修改其类型
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    
+    //将btn赋给属性Iconbutton
+    self.iconButton=btn;
+    
+    //设置背景颜色
+    btn.backgroundColor=[UIColor redColor];
+    
+    //设置背景图片
+    [btn setBackgroundImage:@"btn_01" forState:UIControlStateNormal];
+    [btn setBackgroundImage:@"btn_02" forState:UIControlStateHighlighted];
+    
+    //设置按钮文字
+    [btn setTitle:@"点我啊" forState:UIControlStateNormal];
+    [btn setTitle:@"摸我干啥" forState:UIControlStateHighlighted];
+    
+    //设置文字颜色
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
+
+}
+
+
+
+
+
+
+
+#pragma mark-操作
+
 //- (void)viewDidLoad {
 //    [super viewDidLoad];
 //    // Do any additional setup after loading the view, typically from a nib.
@@ -75,7 +113,8 @@ typedef enum
 
 //=================位移2（利用控件的tag属性和switch进行代码优化）
 
-//
+
+
 //-(IBAction)Move:(UIButton *)button
 //{
 //    CGRect frame=self.iconButton.frame;
@@ -100,9 +139,41 @@ typedef enum
 //
 //}
 
+//farame属性，通常用于实例化控件，指定初始位置（因为Xcode的自动布局功能）
+
+//-如果需要改变控件位置，可以使用center属性
+//-如果需要改变控件大小，可以使用bounds属性
+
+//=====利用center位移
+
+-(IBAction)Move:(UIButton *)button
+{
+    CGPoint center=self.iconButton.center;
+
+    switch (button.tag) {
+        case top:
+            center.y -=20;
+            break;
+        case right:
+            center.x +=20;
+            break;
+        case left:
+            center.x -=20;
+            break;
+        case bottom:
+            center.y +=20;
+            break;
+
+    }
+
+    self.iconButton.center=center;
+
+}
+
+
 
 //=================位移的代码优化2（利用控件的transform属性和Transform方法进行位移）
-
+/*
 
 - (IBAction)Move:(UIButton *)button
 {
@@ -131,7 +202,7 @@ typedef enum
     //CGAffineTransformTranslate可以以原来的transform为原点，多次变换位置
     self.iconButton.transform=CGAffineTransformTranslate(self.iconButton.transform, xDelta, yDelta);
 }
-
+*/
 
 
 
